@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P>
+        ROCK PAPER SCISOORS GAME 
+    </P>
+
+
+    <button onclick="
+
+    const randomNumber = Math.random();
+
+    let result = '';
+        
+    if (randomNumber >= 0 && randomNumber <= 1/3) {
+        result = 'rock';
+        console.log(result);
+        alert ('YOU CHOSE ROCK, COMPUTER CHOSE ROCK,IT IS A TIE');
+    } else if (randomNumber > 1/3 && randomNumber <= 2/3) {
+        result = 'paper';
+        console.log(result);
+        alert ('YOU CHOSE ROCK, COMPUTER CHOSE PAPER,COMPUTER WON');
+    
+    } else if (randomNumber > 2/3) {
+        result = 'scissors';
+        console.log(result),
+        alert ('YOU CHOSE ROCK, COMPUTER CHOSE SCISSORS,YOU WON');
+        }
+        
+        
+        ">
+        ROCK
+    </button>
+
+    <button onclick="
+            let randomNumber2 = Math.random();
+
+            let result2 = '';
+         if (randomNumber2 >= 0 && randomNumber2 <= 1/3) {
+        result2 = 'rock';
+        console.log(result2);
+        alert ('YOU CHOSE PAPER, COMPUTER CHOSE ROCK, YOU WON');
+
+    } else if (randomNumber2 > 1/3 && randomNumber2 <= 2/3) {
+        result2 = 'paper';
+        console.log(result2);
+        alert ('YOU CHOSE PAPER, COMPUTER CHOSE PAPER, IT IS A TIE');
+    
+    } else if (randomNumber2 > 2/3) {
+        result2 = 'scissors';
+        console.log(result2);
+        alert ('YOU CHOSE PAPER, COMPUTER CHOSE SCISSORS, COMPUTER WON');
+        } ">
+        PAPER
+    </button>
+
+    <button>
+        SCISSORS   
+    </button>
+
+
+    <script>
+        
+
+    </script>
+</body>
+</html>

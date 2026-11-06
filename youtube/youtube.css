@@ -1,0 +1,428 @@
+p {
+    font-family: Roboto, arial;
+    margin-bottom: 0;
+    color: rgb(96, 96, 96);
+    font-size: 12px;
+    margin-top: 0;
+}
+
+body {
+    margin: 0;
+    height: auto;
+    padding-top: 80px;
+    padding-left: 100px;
+    background-color: rgb(236, 236, 236);
+    padding-right: 30px;
+    padding-bottom: 20px;
+}
+
+.all-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+@media (max-width:1000px) {
+    .all-preview {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1300px) {
+    .all-preview {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.preview {
+    cursor: pointer;
+}
+
+.thumbnail {
+    width: 100%;
+}
+
+.thumbnail-d {
+    position: relative;
+}
+
+.pro-info {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    margin-top: 10px;
+}
+
+.title {
+    font-weight: 550;
+    color: black;
+    line-height: 21px;
+    margin-bottom: 10px;
+    font-size: 13.1px;
+    width: 220px;
+    
+}
+
+.author {
+    margin-bottom: 4px;
+    font-weight: 400;
+}
+
+.decs {
+    font-weight: 400;
+}
+
+.pro-pic {
+    width: 38px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.pro-info {
+    position: relative;
+    display: flex;
+}
+.vert-pro {
+    margin-right: 5px;
+}
+
+.vert-pro:hover .tt {
+    opacity: 1;
+}
+
+.tt {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    background-color: white;
+    position: absolute;
+    top: 30px;
+    left: 38px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    border: 1px solid black;
+    border-radius: 3px;
+    pointer-events: none;
+}
+
+.tt-text {
+    font-size: 13px;
+    justify-content: center;
+    align-self: center;
+    padding-right: 10px;
+    font-family: Roboto, arial;
+}
+
+.tt-pic {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+.time {
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 12px;
+    font-family: Roboto,arial;
+    padding: 4px;
+    border-radius: 2px;
+
+}
+
+.header {
+    background-color: white;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(230, 230, 230);
+    z-index: 2;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+
+}
+
+.menu {
+    height: 24px;
+    margin-left: 24px;
+    cursor: pointer;
+}
+
+.youtube-logo {
+    margin-left: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.middle {
+    flex: 1;
+    margin-right: 35px;
+    margin-left: 70px;
+    display: flex;
+    align-items: center;
+}
+.Search {
+    height: 36px;
+    flex: 1;
+    margin-right: -1px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+    width: 0;
+}
+
+.Search::placeholder {
+    font-family: Roboto, arial;
+    font-size: 16px;
+
+
+}
+
+.sear-button {
+    height: 40px;
+    width: 65px;
+    border: 1px;
+    border-style: solid;
+    border-color: rgb(202, 202, 202);
+    background-color: rgb(248, 248, 248);
+    cursor: pointer;
+    margin-right: 10px;
+    border-top-right-radius: 19px;
+    border-bottom-right-radius: 19px;
+    position: relative;
+}
+
+.sear-button div {
+    position: fixed;
+    background-color: grey;
+    color: white;
+    font-family: roboto, arial;
+    font-size: 12px;
+    top: 60px;
+    padding: 7px 6px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+}
+
+.sear-button:hover div {
+    opacity: 1;
+}
+
+.sear {
+    height: 25px;
+}
+
+.voice-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(248, 248, 248);
+    cursor: pointer;
+    position: relative;
+}
+
+.voice-button div {
+    position: fixed;
+    background-color: grey;
+    color: white;
+    font-family: roboto, arial;
+    font-size: 12px;
+    top: 60px;
+    right: 180px;
+    padding: 7px 6px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+}
+
+.voice-button:hover div {
+    opacity: 1;
+}
+
+.voice {
+    height: 24px;
+}
+
+.right {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.upload-button {
+    position: relative;
+    cursor: pointer;
+}
+
+.upload-button div {
+    position: fixed;
+    background-color: grey;
+    color: white;
+    font-family: roboto, arial;
+    font-size: 12px;
+    top: 60px;
+    right: 160px;
+    padding: 7px 6px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+}
+
+.upload-button:hover div {
+    opacity: 1;
+}
+
+.upload {
+    height: 24px;
+}
+
+.apps-button {
+    position: relative;
+    cursor: pointer;
+}
+
+.apps-button div {
+    position: fixed;
+    background-color: grey;
+    color: white;
+    font-family: roboto, arial;
+    font-size: 12px;
+    top: 60px;
+    right: 90px;
+    padding: 7px 6px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+}
+
+.apps-button:hover div {
+    opacity: 1;
+}
+
+.apps {
+    height: 24px;
+}
+
+.notifications {
+    height: 24px;
+}
+
+.notifications-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.num {
+    position: absolute;
+    background-color: rgb(212, 0, 0);
+    color: white;
+    top: -2px;
+    right: -4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 11px;
+    border-radius: 20px;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+.notify {
+    position: relative;
+}
+
+.notify div {
+    position: fixed;
+    background-color: grey;
+    color: white;
+    font-family: roboto, arial;
+    font-size: 12px;
+    top: 60px;
+    right: 50px;
+    padding: 7px 6px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+}
+
+.notify:hover div {
+    opacity: 1;
+}
+
+.my-channel {
+    height: 32px;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 55px;
+    bottom: 0;
+    width: 72px;
+    z-index: 3;
+    padding-top: 5px;
+    background-color: white;
+}
+
+.sidebar-link {
+    height: 74px;
+    background-color: white;
+    transition: background-color 0.15s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar-link:hover {
+    background-color: rgb(238, 238, 238);
+    cursor: pointer;
+}
+
+.sidebar-link img {
+    height: 24px;
+}
+
+.sidebar-link div {
+    font-family: roboto, arial;
+    font-size: 10px;
+    margin-top: 7px;
+    padding: 4px 0;
+}
+
+.checkbox:checked .container {
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        body {
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px;
+        }
+        .numbers {
+            display: grid;
+            grid-template-columns: 60px 60px 60px 60px;
+            row-gap: 2px;
+        }
+
+        .btn {
+            height: 60px;
+            width: 50px;
+            margin: 0;
+            background-color: rgb(250, 138, 157);
+            color: white;
+            border-radius: 20%;
+            cursor: pointer;
+            transition: width 0.15s;
+            transition: height 0.15s;
+
+        }
+
+        .btn:active {
+            width: 45px;
+            height: 50px;
+        } 
+
+        .container{
+            padding: 10px;
+            border-color: black;
+            height: fit-content;
+            width: fit-content;
+            border-style: solid;
+            background-color: pink;
+            border-radius: 15px;
+            box-shadow: 3px 2px 5px black;
+        }
+
+        .input {
+            height: 30px;
+            border-radius: 10px;
+            width: 230px;
+
+        }
+
+        #btnwhite{
+            background-color: rgb(245, 206, 206);
+            color: black;
+        }
+
+        #btndif{
+            background-color: rgb(122, 118, 118);
+        }
+        
+    </style>
+</head>
+    <body>
+        <div class="all">
+            <div class="container">
+                <div>
+                    <input placeholder="" class="input">
+                </div>
+                <br>
+
+                <div class="numbers">
+                    <button class="btn" data-value="1">
+                        1
+                    </button>
+                
+                    <button class="btn" data-value="2">
+                        2
+                    </button>
+
+                    <button class="btn" data-value="3">
+                        3
+                    </button>
+
+                    <button class="btn" data-value="c"
+                    id="btnwhite">
+                        AC
+                    </button>
+                
+                    <button class="btn" data-value="4">
+                        4
+                    </button>
+
+                    <button class="btn" data-value="5">
+                        5
+                    </button>
+                
+                    <button class="btn" data-value="6">
+                        6
+                    </button>
+
+                    <button class="btn" data-value="+"
+                    id="btnwhite">
+                        +
+                    </button>
+
+                    <button class="btn" data-value="7">
+                        7
+                    </button>
+
+                    <button class="btn" data-value="8">
+                        8
+                    </button>
+
+                    <button class="btn" data-value="9">
+                        9
+                    </button>
+
+                    <button class="btn" data-value="-"
+                    id="btnwhite">
+                        -
+                    </button>
+
+                    <button class="btn" data-value="0">
+                        0
+                    </button>
+
+                    <button class="btn" data-value="/"
+                    id="btnwhite">
+                        /
+                    </button>
+
+                    <button class="btn" data-value="*"
+                    id="btnwhite">
+                        *
+                    </button>
+
+                    <button class="btn" data-value="="
+                    id="btndif">
+                        =
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
