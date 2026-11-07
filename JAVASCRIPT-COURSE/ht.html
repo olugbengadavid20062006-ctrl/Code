@@ -7,15 +7,18 @@
         <P>
             Youtube Subscribe Button
         </P>
-        
-        <button class="Subscribe-button" onclick="
+
+        <button 
+            class="Subscribe-button" onclick="
             const buttonElement = document.querySelector('.Subscribe-button');
-            if (buttonElement.innerHTML === 'Subscribe') {
-                buttonElement.innerHTML = 'Subscribed';
+            if (buttonElement.innerText === 'Subscribe') {
+                buttonElement.innerText = 'Subscribed';
             } else {
-                buttonElement.innerHTML = 'Subscribe';
+                buttonElement.innerText = 'Subscribe';
             }
-        ">Subscribe</button>
+        ">
+            Subscribe
+        </button>
 
     <SCRipt>
 
