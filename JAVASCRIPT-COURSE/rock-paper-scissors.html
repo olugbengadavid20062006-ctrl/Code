@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <p>
+        rock paper scissors game
+    </p>
+    <button class="rock">
+        Rock
+    </button>
+
+    <button class="paper">
+        Paper
+    </button>
+
+    <button class="scissors">
+        Scissors
+    </button>
+
+    <script>
+        let computerChoice = Math.random();
+        let computerPick = '';
+        let result = '';
+
+        function template(playerChoice) {
+
+            if (computerChoice < 1/3) {
+                computerPick = "rock";
+            } else if (computerChoice > 1/3 && computerChoice < 2/3) {
+                computerPick = "scissors";
+            } else {
+                computerPick = "paper";
+            }
+
+
+            if (playerChoice === computerChoice) {
+                result = "it's a tie";
+            } else if (
+                (playerChoice === "rock" && computerChoice === "scissors") ||
+                (playerChoice === "paper" && computerChoice === "rock") ||
+                (playerChoice === "scissors" && computerChoice === "paper")
+            ) {
+                result = "you won!!"
+            } else {
+                result = "computer won!!"
+            }
+        }
+    </script>
+    </body>
+</html>
