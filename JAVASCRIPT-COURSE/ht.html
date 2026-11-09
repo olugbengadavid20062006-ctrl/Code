@@ -9,18 +9,20 @@
         </P>
 
         <button 
-            class="Subscribe-button" onclick="
+            class="Subscribe-button" onclick="changeButtonText()"
+        ">
+            Subscribe
+        </button>
+
+    <SCRipt>
+        function changeButtonText() {
             const buttonElement = document.querySelector('.Subscribe-button');
             if (buttonElement.innerText === 'Subscribe') {
                 buttonElement.innerText = 'Subscribed';
             } else {
                 buttonElement.innerText = 'Subscribe';
             }
-        ">
-            Subscribe
-        </button>
-
-    <SCRipt>
+        }
 
     </SCRipt>
     </body>
