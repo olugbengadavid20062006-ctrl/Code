@@ -25,8 +25,9 @@
     <button class="reset" onclick="window.location.reload()">
         Reset
     </button>
-
+    <p class="resultMessage"></p>
     <p class="scores"></p>
+    
 
     <script>
         let score = {
@@ -66,19 +67,24 @@
 
 
                 if (playerChoice === computerPick) {
+                    document.querySelector('.resultMessage').innerText = `It's a tie!`;
                     score.tie++;
                 } else if (
                     (playerChoice === "rock" && computerPick === "scissors") ||
                     (playerChoice === "paper" && computerPick === "rock") ||
                     (playerChoice === "scissors" && computerPick === "paper")
                 ) {
+                    console.log("You win!");
+                    document.querySelector('.resultMessage').innerText = `You win!`;
                     score.win++;
                 } else {
+                    console.log("You lose!");
+                    document.querySelector('.resultMessage').innerText = `You lose!`;
                     score.lose++;
                 }
                
                 document.querySelector('.scores').innerText =
-    `Wins: ${score.win}, Losses: ${score.lose}, Ties: ${score.tie}`;
+                    `Wins: ${score.win}, Losses: ${score.lose}, Ties: ${score.tie}`;
 
         }
     </script>
