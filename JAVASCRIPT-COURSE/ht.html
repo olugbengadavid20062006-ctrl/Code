@@ -23,7 +23,11 @@
             if price is greater than 40, free shipping.
         </p>
 
-        <input type="number" class="nameInput">
+        <input type="number" class="nameInput" onkeydown="
+          if (event.key === 'Enter' || event.keyCode === 32) {
+            calculate();
+          }
+        ">
 
         <button class="calculate" onclick="calculate()">
             Calculate
@@ -48,9 +52,9 @@
 
 
             if (inputValue >= 40) {
-                document.querySelector('.result').innerText = `${inputValue}`;
+                document.querySelector('.result').innerText = `$${inputValue}`;
             } else {
-                document.querySelector('.result').innerText = `${inputValue + 10}`;
+                document.querySelector('.result').innerText = `$${inputValue + 10}`;
             }
             
         }
